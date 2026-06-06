@@ -1,0 +1,36 @@
+add_newline = false
+
+format = """
+$directory\
+$git_branch\
+$username\
+$hostname\
+$character\
+"""
+
+[directory]
+# Style: Bold Deep Midnight Blue text ON an Electric Cyan background highlight
+style = "bold fg:#05001a bg:#00ffff"
+truncation_length = 4
+home_symbol = "󰋜 ~"
+format = "[$path]($style) " # This wraps the entire path block in the highlight
+
+[directory.substitutions]
+"Downloads" = "󰉍 Downloads"
+"Documents" = "󰈙 Documents"
+".config" = " Config"
+
+[character]
+success_symbol = "[ >](bold #1faaff) " # Shocking pink star icon
+error_symbol = "[ >](bold #ff00ff) "    # Neon magenta error X
+
+[username]
+show_always = false
+style_user = "bold fg:#05001a bg:#ff007f"
+style_root = "bold fg:#05001a bg:#ff00ff"
+format = "[ $user ]($style)"
+
+[hostname]
+ssh_only = true
+style = "bold fg:#05001a bg:#ff007f"
+format = "[@$hostname ]($style)"

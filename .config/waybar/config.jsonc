@@ -1,0 +1,99 @@
+{
+  "layer" : "top",
+  "position" : "right",
+  "width" : 10,
+  "spacing" : 10,
+  "reload_style_on_change" : true,
+
+
+  "modules-left" : [
+    "hyprland/workspaces",
+  ],
+  "modules-right" : [
+    "battery",
+    "temperature",
+    "wireplumber",
+    "network",
+    "clock",
+  ],
+
+
+
+
+  "hyprland/workspaces":{
+    "format" : "{id}",
+    "format-icons" : {
+      "active" : " ◈ ",
+      "default" : " ◇ ",
+    },
+    "persistant-workspaces" : {"*":3},
+
+  },
+
+
+
+  "hyprland/window":{
+    "rotate" : 270,
+    "format" : "",
+    "icon" : true,
+    "icon-size" : 40,
+  },
+
+
+
+
+  "battery": {
+      "format": "BAT\n{capacity}%",
+      "tooltip":false,
+      "states":{"critical" : 20},
+      "format-icons": ["  ", "  ", "  ", "  ", "  "], 
+  },
+
+  "temperature": {
+      "format": "TEMP\n{temperatureC}°C",
+      "critical-threshold" : 80,
+      "tooltip":false,
+      "format-icons" : "",
+  },
+
+  "wireplumber": {
+    "format": "VOL\n{volume}%",
+    "format-muted": "VOL\nNUL",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "tooltip":false,   
+    "format-icons": ["  ", "  ", "  "]
+  },
+
+  "network":{
+    "format-ethernet" : "CON\nLAN",
+    "format-wifi" : "WiF\n{signalStrength}%",
+    "format-disconnected" : "CON\nERR", 
+    "tooltip":false,
+  },
+
+  "clock": {
+    "format": "{:%I:%M}", 
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+            "mode"          : "year",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "right",
+                "on-scroll"     : 1,
+                "format": {
+                          "months":     "<span color='#ffead3'><b>{}</b></span>",
+                          "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                          "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                          "today":      "<span color='#99ffdd'><b><u>{}</u></b></span>"
+                          }
+                },
+    "actions":  {
+                "on-click-right": "mode",
+                "on-scroll-up": "tz_up",
+                "on-scroll-down": "tz_down",
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+                }
+  },
+
+}

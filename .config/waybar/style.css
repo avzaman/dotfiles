@@ -1,0 +1,75 @@
+@define-color primary-color rgba(255,50,255,0.5);
+@define-color secondary-color rgba(255,255,50,1);
+@define-color third-color rgba(200,0,255,1);
+@define-color accent-color rgba(150,255,255,0.5);
+@define-color warning-color rgba(255,100,100,1);
+
+*{
+  background : none;
+  color : @secondary-color;
+  font-family : Adwaita Mono;
+  font-size : 20px;
+  text-shadow : 2px 2px @accent-color ;
+}
+
+
+tooltip{
+  background : @third-color;
+}
+
+waybar#window{
+  color : @secondary-color;
+}
+
+@keyframes bgAnimation{
+  0%{background-color : @third-color;}
+  50%{background-color : @primary-color;}
+  100%{background-color : @third-color;}
+}
+
+@keyframes warningAnimation{
+  0%{color : @secondary-color;}
+  35%{color : @warning-color;}
+  80%{color : @warning-color;}
+  100%{color : @secondary-color;}
+}
+
+.modules-left{
+  margin-top : 10px;
+  border-style : groove none dashed groove;
+  border-width : 3px;
+  border-color : @accent-color;
+  background : @primary-color;
+}
+
+.modules-center{
+
+}
+
+.modules-right{
+  margin-bottom : 10px;
+  border-style : groove none groove groove;
+  border-width : 3px;
+  border-color : @accent-color;
+  background : @primary-color;
+  color : @secondary-color;
+  padding : 5px;
+}
+
+#workspaces button{
+  border-radius : 0px;
+}
+
+#workspaces button.active{
+  background : @third-color;
+  animation-name : bgAnimation;
+  animation-duration : 3s;
+  animation-iteration-count : infinite;
+}
+
+#wireplumber.muted, #tmperature.critical, #network.disconnected, #battery.critical{
+  color : @warning-color;
+  animation-name : warningAnimation;
+  animation-duration : 0.5s;
+  animation-iteration-count : infinite;
+}

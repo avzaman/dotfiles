@@ -6,6 +6,8 @@ $git_branch\
 $username\
 $hostname\
 $character\
+$python\
+$virtualenv\
 """
 
 [directory]
@@ -34,3 +36,16 @@ format = "[ $user ]($style)"
 ssh_only = true
 style = "bold fg:#05001a bg:#ff007f"
 format = "[@$hostname ]($style)"
+
+[python]
+# Displays the snake icon, the python version, and the (venv) name in yellow
+format = 'via [${symbol}${version} (\($virtualenv\) )]($style)'
+symbol = ' '
+style = 'bold yellow'
+pyenv_version_name = true
+
+[virtualenv]
+format = 'as [$symbol$name]($style) '
+symbol = '󰏖 '
+style = 'bold yellow'
+disabled = false

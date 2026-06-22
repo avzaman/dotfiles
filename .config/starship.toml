@@ -39,13 +39,7 @@ format = "[@$hostname ]($style)"
 
 [python]
 # Displays the snake icon, the python version, and the (venv) name in yellow
-format = 'via [${symbol}${version} (\($virtualenv\) )]($style)'
+format = '[${symbol}${version} (\(󰏖 $virtualenv\) )]($style)'
 symbol = ' '
 style = 'bold yellow'
 pyenv_version_name = true
-
-[virtualenv]
-format = 'as [$symbol$name]($style) '
-symbol = '󰏖 '
-style = 'bold yellow'
-disabled = false

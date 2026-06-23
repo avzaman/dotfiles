@@ -23,8 +23,8 @@ format = "[$path]($style) " # This wraps the entire path block in the highlight
 ".config" = " Config"
 
 [character]
-success_symbol = "[ >](bold #1faaff) " # Shocking pink star icon
-error_symbol = "[ >](bold #ff00ff) "    # Neon magenta error X
+success_symbol = "[ >](bold #1faaff) " 
+error_symbol = "[ >](bold #ff0000) "  
 
 [username]
 show_always = false
@@ -38,8 +38,7 @@ style = "bold fg:#05001a bg:#ff007f"
 format = "[@$hostname ]($style)"
 
 [python]
-# Displays the snake icon, the python version, and the (venv) name in yellow
-format = '[${symbol}${version} (\(󰏖 $virtualenv\) )]($style)'
+format = '[(\(󰏖 $virtualenv\)> )]($style)' #[${symbol}](bold yellow)
 symbol = ' '
-style = 'bold yellow'
+style = 'bold fg:#e8a020'
 pyenv_version_name = true

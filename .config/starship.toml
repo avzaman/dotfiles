@@ -12,7 +12,7 @@ $virtualenv\
 
 [directory]
 # Style: Bold Deep Midnight Blue text ON an Electric Cyan background highlight
-style = "bold fg:#05001a bg:#00ffff"
+style = "bold fg:#00ffff"
 truncation_length = 4
 home_symbol = "󰋜 ~"
 format = "[$path]($style) " # This wraps the entire path block in the highlight

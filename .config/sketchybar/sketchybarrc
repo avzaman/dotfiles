@@ -86,7 +86,7 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
 
-SPACE_ICONS=("󰖟" "󰧑" "" "" "" "󰌳" "" "+" "9" "10" "11" "12")
+SPACE_ICONS=("󰖟" "󰧑" "" "" "" "" "󰌳" "+" "9" "10" "11" "12")
 sketchybar --add event aerospace_workspace_change
 for sid in $(aerospace list-workspaces --all); do
     sketchybar --add item space.$sid left \

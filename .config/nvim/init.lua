@@ -8,7 +8,7 @@ vim.opt.relativenumber = false   -- keep them static (no relative numbers)
 -- Colors ----------------------------------------------------------------
 vim.opt.termguicolors = true     -- kitty supports 24-bit color
 -- Built-in themes: type :colorscheme <Tab> to browse them, then set one:
--- vim.cmd("colorscheme habamax")
+vim.cmd("colorscheme vim")
 
 -- Syntax highlighting ---------------------------------------------------
 -- Neovim ships highlighting for python, markdown, html, c, cpp, java,
